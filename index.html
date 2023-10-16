@@ -94,46 +94,6 @@
    border-radius: 40px;
     width:330px;
   }
-  #s::before{
-    content: "検索";
-  }
-  #s:before::active{
-    content: "";
-    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-  } 
-
-#s::after{
- content: "";
-}
-#s:after::active{
- animation: modoruIn 1s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
-} 
-@keyframes slideIn {
-  0% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(90px);
-  }
-  40%,100% {
-    opacity: 1;
-  }
-}
-@keyframes modoruIn {
-  0% {
-    transform: translateX(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-90px);
-  }
-  40%,100% {
-    opacity: 1;
-  }
-}
-
-
   html{
     background-image: url("background/IMG_0828.jpeg")
   }
@@ -168,10 +128,26 @@
     color: white;
     flex-direction: column;
   }
+  #searchButton{
+    background: skyblue;
+    border: 1px black;
+    border-radius: 40px;
+    color: white;
+    padding: 20px 10px;
+    
+  }
+  #searchButton::hover{
+    background: blue;
+    border: 4px black;
+    border-radius: 40px;
+    color: white;
+    padding: 20px 10px;
+  }
 </style>
   <center>
   <form id="form1" action="/search">
 <input id="sbox"  id="s" name="q" type="text">
+    <input id="searchButton" id="sbtn" type="button" value="検索">
     </form>
   </center>
     <header>
