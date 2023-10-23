@@ -135,7 +135,7 @@
     border-radius: 12px;
     color: white;
     padding: 15px 40px;
-    
+    content: "検索";
   }
   #searchButton::hover{
     background: blue;
@@ -144,11 +144,17 @@
     color: white;
     padding: 12px 40px;
   }
+  #searchButton::active{
+    content: none;
+  }
+  #searchButton::active:after{
+    content: "検索中";
+  }
 </style>
   <center>
   <form id="form1" action="/search">
 <input id="sbox"  id="s" name="q" type="text">
-    <input id="searchButton" id="sbtn" type="button" value="検索">
+    <input id="searchButton" id="sbtn" type="button" >
     </form>
   </center>
     <header>
